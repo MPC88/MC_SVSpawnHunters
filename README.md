@@ -2,7 +2,7 @@
 ================  
 Mod will spawn a "hunter fleet" on key press, using the same function the game uses to spawn these fleets in.  
   
-This works INDEPDENTLY from the existing game timer.  You will end up with 2 fleets if you manually spawn a fleet, then the game spawns a fleet on its timer.  
+This works independent of the existing game timer.  You will end up with 2 fleets if you manually spawn a fleet, then the game spawns a fleet on its timer.  
   
 The fleet will be whichever faction owns the sector you are currently in (I haven't tried it in a "no owner" sector, it might crash or you might get a fleet of marauders, I don't know...).  You can therefore spawn a friendly "hunter fleet".  As with most ships, these will despawn once you leave the sector, but just be aware (note: this can be fun when combined with attack fleets, just sayin'...).  
   
