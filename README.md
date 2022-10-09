@@ -1,5 +1,7 @@
 ﻿Notes / Warnings  
 ================  
+Mod will spawn a "hunter fleet" on key press.  Note that the fleet will be whichever faction owns the sector you are currently in.  You can therefore spawn a friendly "hunter fleet".  As with most ships, these will despawn once you leave the sector, but just be aware (note: this can be fun when combined with attack fleets, just sayin'...).  
+  
 Always backup your save game before installing any mod.  
   
 If you encounter any bug when you have a mode loaded, uninstall the mod first.  If you can replicate the issue without any mods installed, then consider reporting it on official discord / forums.  
