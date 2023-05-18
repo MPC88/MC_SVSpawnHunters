@@ -12,7 +12,7 @@ namespace MC_SVSpawnHunters
     {
         public const string pluginGuid = "mc.starvalor.spawnhunters";
         public const string pluginName = "SV Spawn Hunters";
-        public const string pluginVersion = "1.0.0";
+        public const string pluginVersion = "1.0.1";
 
         public ConfigEntry<KeyCodeSubset> modifierKey;
         public ConfigEntry<KeyCodeSubset> mainKey;
@@ -36,9 +36,13 @@ namespace MC_SVSpawnHunters
                 modifierKey.Value == KeyCodeSubset.None) &&
                 Input.GetKeyDown((KeyCode) mainKey.Value))
                 {
+                    int faction = GameData.data.GetCurrentSector().factionControl;
+                    if (faction < 0 || faction > AccessTools.StaticFieldRefAccess<int>(typeof(FactionDB), "factionsCount") - 1)
+                        faction = 0;
+
                     MethodInfo CreateEnemyRoutine = AccessTools.Method(typeof(GameManager), "CreateEnemyRoutine");
                     GameManager.instance.StartCoroutine(
-                        (System.Collections.IEnumerator)CreateEnemyRoutine.Invoke(GameManager.instance, new object[] { 0f, GameData.data.GetCurrentSector().factionControl })
+                        (System.Collections.IEnumerator)CreateEnemyRoutine.Invoke(GameManager.instance, new object[] { 0f,  faction })
                         );
                 }
         }
